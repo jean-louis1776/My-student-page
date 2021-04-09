@@ -1,84 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Загадки</title>
-	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загадки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/main-logo.svg" type="image/svg">
+    <script type="text/javascript">
 
-		var score = 0;
+        var score = 0;
 
-		function checkAnswer(inputId, answers) {
-			var userAnswer = document.getElementById(inputId).value;
-			userAnswer = userAnswer.toLowerCase();
-			for (var i = 0; i < answers.length; i++) {
-				if (userAnswer == answers[i]) {
-					score++;
-					break;
-				}
-			}
-		}
+        function checkAnswer(inputId, answers) {
+            var userAnswer = document.getElementById(inputId).value;
+            userAnswer = userAnswer.toLowerCase();
+            for (var i = 0; i < answers.length; i++) {
+                if (userAnswer == answers[i]) {
+                    score++;
+                    break;
+                }
+            }
+        }
 
-		function checkAnswers() {
+        function checkAnswers() {
 
-			checkAnswer("userAnswer1", ["сон", "сноведение"]);
-			checkAnswer("userAnswer2", ["морской", "укус акулы"]);
-			checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
+            checkAnswer("userAnswer1", ["сон", "сноведение"]);
+            checkAnswer("userAnswer2", ["морской", "укус акулы"]);
+            checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
 
-			alert("Вы отгадали " + score + " загадок");
+            alert("Вы отгадали " + score + " загадок");
 
-		}
+        }
 
-	</script>
+    </script>
 </head>
 
 <body>
+    <div class="header">
+        <div class="container">
+            <ul class="nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Загадки</a></li>
+                <li><a href="guess.html">Угадайка</a></li>
+                <li><a href="guess2.html">Угадайка мультиплеер</a></li>
+                <li><a href="password.html">Генератор паролей</a></li>
+                <li><a href="http://afria-geekbrains.cf/" target="_blank">Первый сайт по макету</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content container">
+        <h1>Загадки</h1>
+        <div class="puzzle_box">
+            <p class="puzzle_p">Что можно увидеть с закрытыми глазами?</p>
+            <input type="text" id="userAnswer1">
 
-	<div class="content">
-		<div class="header">
-			<a href="index.html">Главная</a>
-			<a href="#">Загадки</a>
-			<a href="guess.html">Угадайка</a>
-			<a href="guess2.html">Угадайка мультиплеер</a>
-			<a href="password.html">Генератор паролей</a>
-			<a href="http://afria-geekbrains.cf/" target="_blank">Первый сайт по макету</a>
-		</div>
+            <p class="puzzle_p puzzle_text">Какой болезнью никто не болеет на суше?</p>
+            <input type="text" id="userAnswer2">
 
-		<div class="contentWrap">
-			<div class="content">
-				<div class="center">
+            <p class="puzzle_p puzzle_text">Какой конь не ест овса?</p>
+            <input type="text" id="userAnswer3">
 
-					<h1>Игра в загадки</h1>
-
-					<div class="box">
-
-						<p class="puzzle_p">Что можно увидеть с закрытыми глазами?</p>
-						<input type="text" id="userAnswer1">
-
-						<p class="puzzle_p">Какой болезнью никто не болеет на суше?</p>
-						<input type="text" id="userAnswer2">
-
-						<p class="puzzle_p">Какой конь не ест овса?</p>
-						<input type="text" id="userAnswer3">
-
-						<br>
-						<a href="#" onClick="checkAnswers();">Ответить</a>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-
-
-	</div>
-	<div class="footer">
-		<p>Copyright &copy; Ilya Aleksin</p>
-	</div>
-
-
+            <br>
+            <a href="#" onClick="checkAnswers();">Ответить</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer_top">
+                <div class="footer_text">
+                    <h3 class="footer__heading">Понравился мой первый сайт?</h3>
+                    <p class="text_footer">
+                        И поверь, ты сможешь также, если пойдешь учиться в GeekBrains. Жми кнопку справа и пиши мне, я
+                        подскажу, на какой факультет поступать.
+                    </p>
+                </div>
+                <a href="mailto:aleksin095@gmail.com" target="_blank" class="footer__button">Поболтаем?</a>
+            </div>
+        </div>
+        <hr class="footer__border">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer_copy">
+                    <p class="copy__text">2021 &copy; by Aleksin. Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
